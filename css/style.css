@@ -3,6 +3,9 @@
 @import "./global/header.css";
 @import "./global/footer.css";
 
+/* Main */
+@import "./main/sobre.css";
+
 /* Utilidades */
 @import "./utilidades/cores.css";
 @import "./utilidades/tipografia.css";

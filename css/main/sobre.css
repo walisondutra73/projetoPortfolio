@@ -1,0 +1,72 @@
+.sobre-bg {
+  background-color: var(--cor8);
+}
+
+.sobre {
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
+  padding: 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sobre-titulo {
+  text-transform: uppercase;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-bottom: 195px;
+  position: relative;
+}
+
+.sobre-titulo::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 350px;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120px;
+  background-color: #ffffff44;
+}
+
+.sobre-titulo::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 3px;
+  height: 640px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 123px;
+  background-color: #ffffff44;
+}
+
+.sobre-titulo span {
+  color: var(--cor6);
+}
+
+.sobre-mim h3,
+.habilidades h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 65px;
+}
+
+.sobre-mim p {
+  padding: 0 100px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.habilidades .icones-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 60px 0;
+  padding: 0 50px;
+}
+
+.sobre .sobre-conexao-icone {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
