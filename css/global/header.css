@@ -1,0 +1,76 @@
+.header-bg {
+  background: url("../../img/endless-constellation.svg") repeat;
+}
+
+.header-menu {
+  display: flex;
+  background-color: var(--cor10);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  text-transform: uppercase;
+}
+
+.perfil,
+.info-pessoal,
+.menu-lista {
+  display: flex;
+  gap: 25px;
+}
+
+.info-pessoal {
+  align-items: center;
+}
+
+.menu-lista {
+  flex-wrap: wrap;
+}
+
+.menu-lista a {
+  color: var(--cor4);
+}
+
+.header-info {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 70px 0 0;
+}
+
+.header-info .header-titulo {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.header-info .header-titulo::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("../../img/code-2-svgrepo-com 1.svg");
+  position: absolute;
+  left: -100px;
+  top: -10px;
+}
+
+.header-info .header-descricao {
+  max-width: 990px;
+  margin-bottom: 45px;
+}
+
+.header-info .header-descricao span {
+  color: var(--cor0);
+}
+
+.header-info .botao-projetos {
+  margin-bottom: 85px;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  color: var(--cor3);
+  background-color: var(--cor5);
+  padding: 20px 50px;
+  font-size: 2rem;
+}
