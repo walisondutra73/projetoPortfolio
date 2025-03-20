@@ -5,6 +5,7 @@
 
 /* Main */
 @import "./main/sobre.css";
+@import "./main/projetos.css";
 
 /* Utilidades */
 @import "./utilidades/cores.css";
