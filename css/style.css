@@ -6,6 +6,7 @@
 /* Main */
 @import "./main/sobre.css";
 @import "./main/projetos.css";
+@import "./main/formacao-exp.css";
 
 /* Utilidades */
 @import "./utilidades/cores.css";

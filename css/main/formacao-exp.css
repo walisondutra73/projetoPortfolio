@@ -1,0 +1,37 @@
+.formacao-experiencia-bg {
+  background-color: var(--cor8);
+}
+
+.formacao-conteudo {
+  background-color: var(--cor9);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.formacao .formacao-titulo {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.formacao .formacao-descricao {
+  text-align: center;
+  width: 580px;
+  margin: 45px auto 50px auto;
+}
+
+.formacao-conteudo .formacao-lista {
+}
+
+.formacao-lista-descricao {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.formacao-lista-descricao .formacao-data {
+  grid-column: 2 / -1;
+}
+
+.formacao-lista-descricao span,
+.formacao-lista-descricao p {
+  grid-column: 1 / -1;
+}

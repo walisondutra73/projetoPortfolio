@@ -8,19 +8,6 @@
 .projetos .projetos-titulo {
   text-transform: uppercase;
   text-align: center;
-  position: relative;
-}
-
-.projetos .projetos-titulo::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 200px;
-  height: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 150px;
-  background-color: #ffffff44;
 }
 
 .projetos .projetos-titulo span {
@@ -30,7 +17,7 @@
 .projetos p {
   text-align: center;
   width: 580px;
-  margin: 115px auto 50px auto;
+  margin: 45px auto 50px auto;
 }
 
 .projetos .lista-projetos {
