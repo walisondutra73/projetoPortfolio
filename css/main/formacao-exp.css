@@ -97,30 +97,25 @@
 
 .formacao-lista-descricao .slider p {
 }
-
-.formacao-lista-descricao .slider::after {
+.formacao-lista-descricao .slider .seta-slider-esquerda,
+.formacao-lista-descricao .slider .seta-slider-direita {
   content: "";
   position: absolute;
   display: block;
   width: 23px;
   height: 35px;
-  left: 28.5px;
-  top: 50%;
   transform: translateY(-50%);
-  background: url("../../img/iconesetaesquerda.svg") no-repeat;
   transition: 0.1s all;
 }
 
-.formacao-lista-descricao .slider::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 23px;
-  height: 35px;
+.formacao-lista-descricao .slider .seta-slider-esquerda {
+  left: 28.5px;
+  top: 50%;
+  background: url("../../img/iconesetaesquerda.svg") no-repeat;
+}
+
+.formacao-lista-descricao .slider .seta-slider-direita {
   right: 28.5px;
   top: 50%;
-  transform: translateY(-50%);
   background: url("../../img/iconesetadireita.svg") no-repeat;
-  background-position: center left;
-  transition: 0.1s all;
 }
