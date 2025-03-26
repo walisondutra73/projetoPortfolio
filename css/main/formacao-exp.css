@@ -2,10 +2,16 @@
   background-color: var(--cor8);
 }
 
+.formacao-experiencia-bg .container {
+  width: 1200px;
+}
+
 .formacao-conteudo {
   background-color: var(--cor9);
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.2fr;
+  padding-left: 50px;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
 }
 
 .formacao .formacao-titulo {
@@ -20,18 +26,101 @@
 }
 
 .formacao-conteudo .formacao-lista {
+  background-color: var(--cor8);
+  padding: 50px 0 55px 55px;
 }
 
-.formacao-lista-descricao {
+.formacao-conteudo .formacao-lista ul li a {
+  padding-bottom: 50px;
+  display: block;
+  transition: 0.4s all;
+  position: relative;
+}
+
+.formacao-conteudo .formacao-lista ul li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 60px;
+  left: -55px;
+  top: -12px;
+  background-color: transparent;
+  transition: 0.4s all;
+}
+
+.formacao-conteudo .formacao-lista ul li a:hover {
+  color: var(--cor6);
+}
+
+.formacao-conteudo .formacao-lista ul li a:hover::after {
+  background-color: var(--cor6);
+}
+
+.formacao-lista a.icone-adicional::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  left: -35px;
+  top: 5px;
+  background: url("../../img/iconesinalmaissvg.svg") no-repeat;
+  filter: brightness(100);
+  transition: 0.1s all;
+}
+
+.formacao-lista a.icone-adicional:hover::before {
+  filter: none;
+}
+
+.formacao-lista-descricao .slider {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.3fr;
+  padding: 20px 80px 100px;
+  position: relative;
 }
 
-.formacao-lista-descricao .formacao-data {
+.formacao-lista-descricao .slider .formacao-data {
   grid-column: 2 / -1;
+  padding: 0;
 }
 
-.formacao-lista-descricao span,
-.formacao-lista-descricao p {
+.formacao-lista-descricao .slider span,
+.formacao-lista-descricao .slider p {
   grid-column: 1 / -1;
+}
+
+.formacao-lista-descricao .slider span {
+  padding: 20px 0 75px;
+}
+
+.formacao-lista-descricao .slider p {
+}
+
+.formacao-lista-descricao .slider::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 35px;
+  left: 28.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../../img/iconesetaesquerda.svg") no-repeat;
+  transition: 0.1s all;
+}
+
+.formacao-lista-descricao .slider::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 35px;
+  right: 28.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../../img/iconesetadireita.svg") no-repeat;
+  background-position: center left;
+  transition: 0.1s all;
 }
