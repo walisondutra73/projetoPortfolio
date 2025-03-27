@@ -31,7 +31,6 @@ const botoesNavFixed = Array.from(
   document.querySelectorAll(".header-menu-fixed li a")
 );
 const arrayBotoesNav = botoesNav.concat(botoesNavFixed);
-console.log(arrayBotoesNav);
 
 function redirectBotoes(event) {
   event.preventDefault();
