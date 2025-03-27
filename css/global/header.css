@@ -73,6 +73,25 @@
   background-color: var(--cor5);
   padding: 20px 50px;
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.header-info .header-seta {
+  position: relative;
+  bottom: 0;
+  animation: mover 2s infinite;
+}
+
+@keyframes mover {
+  0% {
+    bottom: 0; /* começa no bottom */
+  }
+  50% {
+    bottom: -30px; /* vai para baixo (ajuste conforme necessário) */
+  }
+  100% {
+    bottom: 0; /* volta para o topo */
+  }
 }
 
 /* Nav Fixo */
@@ -87,9 +106,10 @@
   text-transform: uppercase;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -131px;
   left: 0;
   opacity: 0;
+  transition: 0.6s;
 }
 
 .perfil-fixed,
