@@ -6,7 +6,8 @@
   width: 1200px;
 }
 
-.formacao-conteudo {
+.formacao-conteudo,
+.experiencia-conteudo {
   background-color: var(--cor9);
   display: grid;
   grid-template-columns: 1fr 2.2fr;
@@ -14,30 +15,43 @@
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
 }
 
-.formacao .formacao-titulo {
+.experiencia-conteudo {
+  background-color: var(--cor8);
+}
+
+.formacao .formacao-titulo,
+.experiencia .experiencia-titulo {
   text-transform: uppercase;
   text-align: center;
 }
 
-.formacao .formacao-descricao {
+.formacao .formacao-descricao,
+.experiencia .experiencia-descricao {
   text-align: center;
   width: 580px;
   margin: 45px auto 50px auto;
 }
 
-.formacao-conteudo .formacao-lista {
+.formacao-conteudo .formacao-lista,
+.experiencia-conteudo .experiencia-lista {
   background-color: var(--cor8);
   padding: 50px 0 55px 55px;
 }
 
-.formacao-conteudo .formacao-lista ul li a {
+.experiencia-conteudo .experiencia-lista {
+  background-color: var(--cor9);
+}
+
+.formacao-conteudo .formacao-lista ul li a,
+.experiencia-conteudo .experiencia-lista ul li a {
   padding-bottom: 50px;
   display: block;
   transition: 0.4s all;
   position: relative;
 }
 
-.formacao-conteudo .formacao-lista ul li a::after {
+.formacao-conteudo .formacao-lista ul li a::after,
+.experiencia-conteudo .experiencia-lista ul li a::after {
   content: "";
   position: absolute;
   display: block;
@@ -49,11 +63,13 @@
   transition: 0.4s all;
 }
 
-.formacao-conteudo .formacao-lista ul li a:hover {
+.formacao-conteudo .formacao-lista ul li a:hover,
+.experiencia-conteudo .experiencia-lista ul li a:hover {
   color: var(--cor6);
 }
 
-.formacao-conteudo .formacao-lista ul li a:hover::after {
+.formacao-conteudo .formacao-lista ul li a:hover::after,
+.experiencia-conteudo .experiencia-lista ul li a:hover::after {
   background-color: var(--cor6);
 }
 
@@ -74,31 +90,36 @@
   filter: none;
 }
 
-.formacao-lista-descricao .slider {
+.formacao-lista-descricao .slider,
+.experiencia-lista-descricao {
   display: grid;
   grid-template-columns: 2fr 1.3fr;
   padding: 20px 80px 100px;
   position: relative;
 }
 
-.formacao-lista-descricao .slider .formacao-data {
+.formacao-lista-descricao .slider .formacao-data,
+.experiencia-lista-descricao .experiencia-data {
   grid-column: 2 / -1;
   padding: 0;
 }
 
 .formacao-lista-descricao .slider span,
-.formacao-lista-descricao .slider p {
+.formacao-lista-descricao .slider p,
+.experiencia-lista-descricao span,
+.experiencia-lista-descricao p {
   grid-column: 1 / -1;
 }
 
-.formacao-lista-descricao .slider span {
+.formacao-lista-descricao .slider span,
+.experiencia-lista-descricao span {
   padding: 20px 0 75px;
 }
 
-.formacao-lista-descricao .slider p {
-}
 .formacao-lista-descricao .slider .seta-slider-esquerda,
-.formacao-lista-descricao .slider .seta-slider-direita {
+.formacao-lista-descricao .slider .seta-slider-direita,
+.experiencia-lista-descricao .seta-slider-esquerda,
+.experiencia-lista-descricao .seta-slider-direita {
   content: "";
   position: absolute;
   display: block;
