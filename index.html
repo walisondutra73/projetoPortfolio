@@ -15,7 +15,7 @@
 <body>
   <header class="header-bg">
     <div class="container">
-      <nav class="header-menu">
+      <nav id="secao-header" class="header-menu">
         <div class="perfil">
           <img src="./img/perfil.png" alt="Foto de perfil portfolio">
           <div class="info-pessoal">
@@ -24,9 +24,9 @@
           </div>
         </div>
         <ul class="menu-lista font-1-s">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Projetos</a></li>
+          <li><a href="#secao-header">Home</a></li>
+          <li><a href="#secao-sobre">Sobre</a></li>
+          <li><a href="#secao-projetos">Projetos</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -34,7 +34,7 @@
       <div class="header-info">
         <h1 class="header-titulo font-1-xxl cor0">Desenvolvedor Front End & UX/UI Designer</h1>
         <p class="header-descricao font-2-m cor4">Desenvolvo pequenos projetos como o Bikcraft utilizando apenas <span>HTML</span>, <span>CSS</span> e <span>JavaScript</span>. Para aplicativos web como a rede social Dogs eu trabalhei no UX e UI Design do projeto.</p>
-        <a class="botao-projetos font-1-m cor5">Projetos</a>
+        <a href="#secao-projetos" class="botao-projetos font-1-m cor5">Projetos</a>
         <img class="header-seta" src=" ./img/down-svgrepo-com 1.svg" alt="Seta indicando para projetos">
       </div>
     </div>
@@ -42,7 +42,7 @@
   <main>
     <section class="sobre-bg">
       <div class="container">
-        <div class="sobre">
+        <div id="secao-sobre" class="sobre">
           <h2 class="sobre-titulo font-1-xl cor0">Sobre<span>.</span></h2>
           <div class="sobre-mim">
             <h3 class="font-1-m cor0">Sobre mim</h3>
@@ -71,7 +71,7 @@
     </section>
     <section class="projetos-bg">
       <div class="container">
-        <div class="projetos">
+        <div id="secao-projetos" class="projetos">
           <h2 class="projetos-titulo font-1-xl cor0">Projetos<span>.</span></h2>
           <span class="detalhe-traco"></span>
           <p class="font-2-s cor4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum eros efficitur quam rhoncus, non dapibus nunc faucibus.</p>
@@ -179,9 +179,9 @@
       </div>
     </div>
     <ul class="menu-lista-fixed font-1-s">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Projetos</a></li>
+      <li><a href="#secao-header">Home</a></li>
+      <li><a href="#secao-sobre">Sobre</a></li>
+      <li><a href="#secao-projetos">Projetos</a></li>
       <li><a href="#">Contato</a></li>
     </ul>
   </nav>
