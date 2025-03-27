@@ -66,6 +66,18 @@
   padding: 0 50px;
 }
 
+.habilidades .icones-habilidades img {
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.habilidades .icones-habilidades img:hover {
+  padding: 0;
+  filter: brightness(100);
+}
+
 .sobre .sobre-conexao-icone {
   grid-column: 1 / -1;
   justify-self: center;

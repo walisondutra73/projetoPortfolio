@@ -24,4 +24,23 @@ function redirectProjects(event) {
 
 botaoProjetos.addEventListener("click", redirectProjects);
 
-//Abertura do modal em Projetos//
+//Redirecionamento NAV//
+
+const botoesNav = Array.from(document.querySelectorAll(".menu-lista li a"));
+const botoesNavFixed = Array.from(
+  document.querySelectorAll(".header-menu-fixed li a")
+);
+const arrayBotoesNav = botoesNav.concat(botoesNavFixed);
+
+function redirectBotoes(event) {
+  event.preventDefault();
+  const linkHref = event.target.href.split("#")[1];
+  const posicaoYElemento = document.getElementById(linkHref).offsetTop;
+  window.scrollTo({ top: posicaoYElemento - 131, behavior: "smooth" });
+}
+
+function aplicarEventoClick(botao) {
+  botao.addEventListener("click", redirectBotoes);
+}
+
+arrayBotoesNav.forEach(aplicarEventoClick);
