@@ -74,3 +74,39 @@
   padding: 20px 50px;
   font-size: 2rem;
 }
+
+/* Nav Fixo */
+
+.header-menu-fixed {
+  display: flex;
+  background-color: var(--cor10);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 150px;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.perfil-fixed,
+.info-pessoal-fixed,
+.menu-lista-fixed {
+  display: flex;
+  gap: 25px;
+}
+
+.info-pessoal-fixed {
+  align-items: center;
+}
+
+.menu-lista-fixed {
+  flex-wrap: wrap;
+}
+
+.menu-lista-fixed a {
+  color: var(--cor4);
+}
