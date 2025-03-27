@@ -1,0 +1,26 @@
+.contato-bg {
+  background: url("../../img/endless-constellation.svg") repeat;
+}
+
+.contato-titulo {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contato .contato-descricao {
+  text-align: center;
+  width: 580px;
+  margin: 45px auto 50px auto;
+}
+
+.contato .contato-conteudo {
+  background: var(--cor7);
+  margin: 0 auto;
+  width: 950px;
+  height: 300px;
+}
+
+.contato-conteudo .contato-lista ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
