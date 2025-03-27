@@ -23,4 +23,7 @@
 .contato-conteudo .contato-lista ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
+  width: 950px;
+  height: 300px;
 }
