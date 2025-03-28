@@ -26,4 +26,27 @@
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
   width: 950px;
   height: 300px;
+  place-items: center;
+}
+
+.contato-conteudo .contato-lista ul li {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+}
+
+.contato-conteudo li:nth-child(2n) {
+  border-right: 3px solid;
+  border-left: 3px solid;
+  border-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 10%,
+      rgba(128, 128, 128, 0.5) 10%,
+      rgba(128, 128, 128, 0.5) 90%,
+      transparent 90%,
+      transparent 100%
+    )
+    1;
+  padding: 50px;
 }
