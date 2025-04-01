@@ -83,3 +83,49 @@
   height: 3px;
   grid-column: 1 / -1;
 }
+
+/* MODAL PROJETOS */
+
+#modal-projetos {
+  background-color: black;
+  width: 1200px;
+  height: 800px;
+}
+.descricao-modal-projetos .logo-modal-projeto {
+  color: transparent;
+  width: 250px;
+  height: 50px;
+  background: url(../../img/titulochristianeestefani.svg) no-repeat center
+    center;
+  background-size: 100%;
+  margin-top: 25px;
+}
+
+.descricao-modal-projetos p {
+  color: white;
+}
+
+.descricao-modal-projetos {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.descricao-modal-projetos .detalhe-traco {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-modal-projetos .img-modal-projetos img {
+  width: 700px;
+}
+/* .grid-modal-projetos .img-modal-projetos {
+  align-self: center;
+} */
+
+.grid-modal-projetos {
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  padding: 40px;
+}
