@@ -2,6 +2,10 @@
   background: url("../../img/endless-constellation.svg") repeat;
 }
 
+#light-mode .contato-bg {
+  background: url("../../img/subtle-prism.svg") repeat;
+}
+
 .contato-titulo {
   text-transform: uppercase;
   text-align: center;
