@@ -2,6 +2,10 @@
   background: url("../../img/endless-constellation.svg") repeat;
 }
 
+#light-mode .header-bg {
+  background: url("../../img/background_principal.svg") repeat;
+}
+
 .header-menu {
   display: flex;
   background-color: var(--cor10);

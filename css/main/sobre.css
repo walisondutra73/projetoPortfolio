@@ -41,6 +41,11 @@
   background-color: #ffffff44;
 }
 
+#light-mode .sobre-titulo::after,
+#light-mode .sobre-titulo::before {
+  background-color: #00000044;
+}
+
 .sobre-titulo span {
   color: var(--cor6);
 }

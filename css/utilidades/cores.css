@@ -60,3 +60,18 @@
 .cor11 {
   color: var(--cor11);
 }
+
+#light-mode {
+  --cor0: #000000;
+  --cor1: #0a0a0a;
+  --cor2: #e5e5e5;
+  --cor3: #000000;
+  --cor4: #0a0a0a;
+  --cor5: #cfcfcf;
+  --cor6: #8c20ff;
+  --cor7: #e5e5e5;
+  --cor8: #f6f6f6;
+  --cor9: #ffffff;
+  --cor10: #cfcfcf;
+  --cor11: #000000;
+}
