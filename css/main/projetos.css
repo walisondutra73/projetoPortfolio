@@ -59,6 +59,14 @@
   position: relative;
 }
 
+.projeto-amostra .titulo-projeto {
+  width: 300px;
+  height: 50px;
+  background: center no-repeat;
+  color: transparent;
+  user-select: none;
+}
+
 .projeto-amostra .projeto-img:hover .projeto-img-opacity {
   background: #0000009c url("../../img/lupa.svg") no-repeat center;
   opacity: 1;
