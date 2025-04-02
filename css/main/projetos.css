@@ -80,6 +80,12 @@
   transition: 0.3s opacity;
 }
 
+.projeto-amostra .projeto-img .projeto-img-opacity a {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
 .projeto-amostra .projeto-img:hover {
   border-color: var(--cor6);
   cursor: pointer;
@@ -95,22 +101,34 @@
 /* MODAL PROJETOS */
 
 #modal-projetos {
-  background-color: black;
+  background-color: var(--cor7);
   width: 1200px;
-  height: 800px;
-}
-.descricao-modal-projetos .logo-modal-projeto {
-  color: transparent;
-  width: 250px;
-  height: 50px;
-  background: url(../../img/titulochristianeestefani.svg) no-repeat center
-    center;
-  background-size: 100%;
-  margin-top: 25px;
+  height: 750px;
+  /* border-radius: 10px; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
-.descricao-modal-projetos p {
-  color: white;
+#modal-projetos .botao-fechar-modal {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  margin: 20px;
+  border: solid 2px white;
+}
+
+.grid-modal-projetos {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  gap: 40px;
+  padding: 40px;
+  width: 800px;
 }
 
 .descricao-modal-projetos {
@@ -119,21 +137,30 @@
   text-align: center;
 }
 
+.descricao-modal-projetos .logo-modal-projeto {
+  color: transparent;
+  width: 250px;
+  height: 50px;
+  background: url(../../img/titulochristianeestefani.svg) no-repeat center
+    center;
+  background-size: 100%;
+  margin-top: 25px;
+  user-select: none;
+}
+
+.descricao-modal-projetos p {
+  color: white;
+  width: 600px;
+}
+
 .descricao-modal-projetos .detalhe-traco {
-  margin: 0;
+  margin: 20px 20px 40px;
   padding: 0;
 }
 
 .grid-modal-projetos .img-modal-projetos img {
-  width: 700px;
+  width: 100%;
 }
 /* .grid-modal-projetos .img-modal-projetos {
   align-self: center;
 } */
-
-.grid-modal-projetos {
-  display: grid;
-  justify-items: center;
-  gap: 40px;
-  padding: 40px;
-}

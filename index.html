@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body id="light-mode">
+<body>
   <header class="header-bg">
     <div class="container">
       <nav id="secao-header" class="header-menu">
@@ -20,7 +20,7 @@
           <img src="./img/perfil.png" alt="Foto de perfil portfolio">
           <div class="info-pessoal">
             <h2 class="font-1-l cor4">Walison S Dutra</h2>
-            <a href=""><img src="./img/moon-svgrepo-com 2.svg" width="40" alt="Ícone modo escuro"></a>
+            <a class="botao-darkmode" href=""><img src="./img/moon-svgrepo-com 2.svg" width="40" alt="Ícone modo escuro"></a>
           </div>
         </div>
         <ul class="menu-lista font-1-s">
@@ -78,7 +78,7 @@
           <div class="lista-projetos">
             <div class="projeto-amostra">
               <div class="projeto-img" style="background-image: url('./img/iconechristianeestefani.png');">
-                <div class="projeto-img-opacity"></div>
+                <div class="projeto-img-opacity"><a id="projeto-ver-mais" href=""></a></div>
               </div>
               <h3 class="titulo-projeto" style="background-image: url('./img/titulochristianeestefani-dark.svg');">Christian e Estefani</h3>
             </div>
@@ -222,9 +222,11 @@
     </ul>
   </nav>
   <section id="modal-projetos">
+    <a class="botao-fechar-modal" href="">X</a>
     <div class="grid-modal-projetos">
 
       <div class="descricao-modal-projetos">
+
         <h3 class="logo-modal-projeto">Christian e Estéfani</h3>
         <span class="detalhe-traco"></span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum</p>

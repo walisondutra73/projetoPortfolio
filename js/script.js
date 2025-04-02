@@ -44,3 +44,44 @@ function aplicarEventoClick(botao) {
 }
 
 arrayBotoesNav.forEach(aplicarEventoClick);
+
+// MODAL SCRIPT
+
+const botaoProjetoVerMais = document.getElementById("projeto-ver-mais");
+
+function exibirModalProjetos(event) {
+  event.preventDefault();
+  const modalProjetos = document.getElementById("modal-projetos");
+  modalProjetos.style.opacity = 1;
+  modalProjetos.style.visibility = "visible";
+  document
+    .querySelector(".botao-fechar-modal")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      modalProjetos.style.opacity = 0;
+      modalProjetos.style.visibility = "hidden";
+    });
+}
+
+botaoProjetoVerMais.addEventListener("click", exibirModalProjetos);
+
+// BOTAO DARKMODE
+
+const botaoDarkMode = document.querySelector(".botao-darkmode");
+
+function ativarModoEscuro(event) {
+  event.preventDefault();
+  const elementoBody = document.querySelector("body");
+  const imagemBotao = event.currentTarget.querySelector("img");
+
+  if (elementoBody.getAttribute("id")) {
+    elementoBody.setAttribute("id", "");
+    imagemBotao.src = "./img/moon-svgrepo-com 2.svg";
+  } else {
+    elementoBody.setAttribute("id", "light-mode");
+
+    imagemBotao.src = "./img/sun.svg";
+  }
+}
+
+botaoDarkMode.addEventListener("click", ativarModoEscuro);
