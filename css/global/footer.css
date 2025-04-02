@@ -17,7 +17,14 @@
 .footer .footer-traco {
   width: 3px;
   height: 60px;
-  background-color: #ffffff44;
+  background-color: var(--cor12);
+  justify-self: center;
+}
+
+#light-mode .footer-traco {
+  width: 3px;
+  height: 60px;
+  background-color: var(--cor12);
   justify-self: center;
 }
 

@@ -90,6 +90,14 @@
   filter: none;
 }
 
+#light-mode .formacao-lista a.icone-adicional::before {
+  filter: brightness(0);
+}
+
+#light-mode .formacao-lista a.icone-adicional:hover::before {
+  filter: none;
+}
+
 .formacao-lista-descricao .slider,
 .experiencia-lista-descricao {
   display: grid;

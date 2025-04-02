@@ -9,5 +9,9 @@
   margin: 100px auto 0;
   width: 200px;
   height: 3px;
-  background-color: #ffffff44;
+  background-color: var(--cor12);
+}
+
+#light-mode .detalhe-traco {
+  background-color: var(--cor12);
 }

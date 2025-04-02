@@ -26,7 +26,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 120px;
-  background-color: #ffffff44;
+  background-color: var(--cor12);
 }
 
 .sobre-titulo::after {
@@ -38,12 +38,12 @@
   left: 50%;
   transform: translateX(-50%);
   top: 123px;
-  background-color: #ffffff44;
+  background-color: var(--cor12);
 }
 
 #light-mode .sobre-titulo::after,
 #light-mode .sobre-titulo::before {
-  background-color: #00000044;
+  background-color: var(--cor12);
 }
 
 .sobre-titulo span {
@@ -81,6 +81,11 @@
 .habilidades .icones-habilidades img:hover {
   padding: 0;
   filter: brightness(100);
+}
+
+#light-mode .icones-habilidades img:hover {
+  padding: 0;
+  filter: brightness(0);
 }
 
 .sobre .sobre-conexao-icone {
