@@ -1,5 +1,6 @@
 .projetos-bg {
   background-color: var(--cor7);
+  transition: 0.3s;
 }
 
 .projetos .projetos-titulo {

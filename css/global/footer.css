@@ -1,5 +1,6 @@
 .footer-bg {
   background-color: var(--cor8);
+  transition: 0.3s;
 }
 
 .footer-bg .container {

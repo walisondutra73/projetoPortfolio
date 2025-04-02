@@ -1,5 +1,6 @@
 .formacao-experiencia-bg {
   background-color: var(--cor8);
+  transition: 0.3s;
 }
 
 .formacao-experiencia-bg .container {
@@ -13,6 +14,7 @@
   grid-template-columns: 1fr 2.2fr;
   padding-left: 50px;
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
 }
 
 .experiencia-conteudo {
@@ -36,6 +38,7 @@
 .experiencia-conteudo .experiencia-lista {
   background-color: var(--cor8);
   padding: 50px 0 55px 55px;
+  transition: 0.3s;
 }
 
 .experiencia-conteudo .experiencia-lista {
