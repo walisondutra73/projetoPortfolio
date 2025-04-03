@@ -67,7 +67,8 @@ botaoProjetoVerMais.addEventListener("click", exibirModalProjetos);
 
 // BOTAO DARKMODE
 
-const botaoDarkMode = document.querySelector(".botao-darkmode");
+const botaoDarkMode = Array.from(document.querySelectorAll(".botao-darkmode"));
+console.log(botaoDarkMode);
 
 function ativarModoEscuro(event) {
   event.preventDefault();
@@ -84,4 +85,6 @@ function ativarModoEscuro(event) {
   }
 }
 
-botaoDarkMode.addEventListener("click", ativarModoEscuro);
+botaoDarkMode.forEach(function (botao) {
+  botao.addEventListener("click", ativarModoEscuro);
+});
