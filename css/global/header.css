@@ -135,3 +135,22 @@
 .menu-lista-fixed a {
   color: var(--cor4);
 }
+
+@media (max-width: 1405px) {
+  .header-menu {
+    padding: 15px 30px;
+  }
+
+  .header-info .header-titulo {
+    margin-left: 60px;
+  }
+
+  .header-info .header-titulo::before {
+    left: -100px;
+    top: -20px;
+  }
+  .header-info .botao-projetos {
+    padding: 20px 30px;
+    font-size: 1.5rem;
+  }
+}

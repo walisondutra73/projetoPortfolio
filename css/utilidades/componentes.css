@@ -15,3 +15,9 @@
 #light-mode .detalhe-traco {
   background-color: var(--cor12);
 }
+
+@media (max-width: 1405px) {
+  .container {
+    max-width: 900px;
+  }
+}
