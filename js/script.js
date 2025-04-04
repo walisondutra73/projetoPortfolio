@@ -68,12 +68,14 @@ botaoProjetoVerMais.addEventListener("click", exibirModalProjetos);
 // BOTAO DARKMODE
 
 const botaoDarkMode = Array.from(document.querySelectorAll(".botao-darkmode"));
-console.log(botaoDarkMode);
 
 function ativarModoEscuro(event) {
   event.preventDefault();
   const elementoBody = document.querySelector("body");
   const imagemBotao = event.currentTarget.querySelector("img");
+  const imagensProjeto = Array.from(
+    document.querySelectorAll(".titulo-projeto")
+  );
 
   if (elementoBody.getAttribute("id")) {
     elementoBody.setAttribute("id", "");
@@ -83,6 +85,23 @@ function ativarModoEscuro(event) {
 
     imagemBotao.src = "./img/sun.svg";
   }
+  let bgImageOriginal = "";
+  let bgImageModificado = "";
+  imagensProjeto.forEach(function (logoProjeto) {
+    const urlLogo = logoProjeto.style.backgroundImage;
+
+    const urlDividida = urlLogo.split('"', 2);
+
+    const caminhoImg = urlDividida[1].split(".svg");
+
+    if (elementoBody.getAttribute("id")) {
+      logoProjeto.style.backgroundImage =
+        'url("' + caminhoImg[0] + '-dark.svg")';
+    } else {
+      logoProjeto.style.backgroundImage =
+        'url("' + caminhoImg[0].split("-dark").join(".svg") + '")';
+    }
+  });
 }
 
 botaoDarkMode.forEach(function (botao) {
