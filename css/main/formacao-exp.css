@@ -151,3 +151,9 @@
   top: 50%;
   background: url("../../img/iconesetadireita.svg") no-repeat;
 }
+
+@media (max-width: 1405px) {
+  .formacao .formacao-descricao {
+    margin: 40px auto 45px auto;
+  }
+}
