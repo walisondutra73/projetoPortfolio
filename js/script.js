@@ -45,25 +45,93 @@ function aplicarEventoClick(botao) {
 
 arrayBotoesNav.forEach(aplicarEventoClick);
 
+//ARRAY MODAL SCRIPT
+const arrayInfoProjetos = [
+  {
+    titulo: "./img/titulochristianeestefani.svg",
+    descricao:
+      "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem: "./img/site_christian_projetos.gif",
+  },
+  {
+    titulo: "./img/titulobikcraft.svg",
+
+    descricao:
+      "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem:
+      "https://static-cse.canva.com/blob/1256154/feature_free-gifs_hero.gif",
+  },
+  {
+    titulo: "./img/tituloportfolio.svg",
+    descricao:
+      "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem: "./img/site_christian_projetos.gif",
+  },
+  {
+    titulo: "./img/titulodogs.svg",
+    descricao:
+      "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem: "./img/site_christian_projetos.gif",
+  },
+  {
+    titulo: "./img/titulolobo.svg",
+    descricao:
+      "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem: "./img/site_christian_projetos.gif",
+  },
+  {
+    titulo: "./img/titulogato.svg",
+    descricao:
+      "6Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    imagem: "./img/site_christian_projetos.gif",
+  },
+];
+
 // MODAL SCRIPT
 
-const botaoProjetoVerMais = document.getElementById("projeto-ver-mais");
+const botaoProjetoVerMais = document.querySelectorAll(".projeto-ver-mais");
 
 function exibirModalProjetos(event) {
   event.preventDefault();
+  const idProjeto = event.target.getAttribute("projeto-id");
   const modalProjetos = document.getElementById("modal-projetos");
+  modalProjetos.querySelector(
+    ".grid-modal-projetos .descricao-modal-projetos h3"
+  ).style.backgroundImage = "url(" + arrayInfoProjetos[idProjeto].titulo + ")";
+  modalProjetos.querySelector(
+    ".grid-modal-projetos .descricao-modal-projetos p"
+  ).innerHTML = arrayInfoProjetos[idProjeto].descricao;
+  modalProjetos.querySelector(
+    ".grid-modal-projetos .img-modal-projetos img"
+  ).src = arrayInfoProjetos[idProjeto].imagem;
+  const fundoModalP = document.getElementById("fundo-modal-projetos");
+
   modalProjetos.style.opacity = 1;
   modalProjetos.style.visibility = "visible";
+  fundoModalP.style.opacity = 1;
+  fundoModalP.style.visibility = "visible";
   document
     .querySelector(".botao-fechar-modal")
     .addEventListener("click", function (event) {
       event.preventDefault();
       modalProjetos.style.opacity = 0;
       modalProjetos.style.visibility = "hidden";
+      fundoModalP.style.opacity = 0;
+      fundoModalP.style.visibility = "hidden";
+    });
+  document
+    .getElementById("fundo-modal-projetos")
+    .addEventListener("click", function (event) {
+      modalProjetos.style.opacity = 0;
+      modalProjetos.style.visibility = "hidden";
+      fundoModalP.style.opacity = 0;
+      fundoModalP.style.visibility = "hidden";
     });
 }
 
-botaoProjetoVerMais.addEventListener("click", exibirModalProjetos);
+botaoProjetoVerMais.forEach(function (projeto) {
+  projeto.addEventListener("click", exibirModalProjetos);
+});
 
 // BOTAO DARKMODE
 
