@@ -65,7 +65,7 @@ const arrayInfoProjetos = [
     titulo: "./img/tituloportfolio.svg",
     descricao:
       "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
-    imagem: "./img/site_christian_projetos.gif",
+    imagem: "./img/giff_portfolio.gif",
   },
   {
     titulo: "./img/titulodogs.svg",
@@ -177,6 +177,17 @@ botaoDarkMode.forEach(function (botao) {
 });
 
 //ARRAY SELETORES MENU FORMAÇÃO //
+const arraySeletorFormacao = [
+  {
+    titulo: "Graduação",
+  },
+  {
+    titulo: "Cursos - Origamid",
+  },
+  {
+    titulo: "Técnico",
+  },
+];
 const arrayMenuFormacao = [
   [
     {
@@ -221,7 +232,46 @@ const arrayMenuFormacao = [
   ],
 ];
 
+// REFRESH PAGINA - MENU FORMACAO //
+const arrayCursosFormacao = [];
+arrayMenuFormacao[0].forEach(function (formacao) {
+  document.querySelectorAll(".slider > a").forEach(function (seta) {
+    arrayMenuFormacao[0].length <= 1
+      ? seta.classList.add("ocultar-seta")
+      : seta.classList.remove("ocultar-seta");
+  });
+  arrayCursosFormacao.push(`
+  <div class="curso">
+    <h4 class="font-1-s-b cor0">${formacao.curso}</h4>
+    <span class="formacao-data font-2-xs cor0">${formacao.data}</span>
+    <span class="font-1-s cor6">${formacao.instituição}</span>
+    <p class="font-2-s cor3">${formacao.descricao}</p>
+  </div>
+  `);
+});
+document.querySelector(".cursos-formacao").innerHTML = arrayCursosFormacao;
+
 // SELETORES DO MENU FORMAÇÃO //
+const containerSeletorFormacao = document.querySelector(
+  ".formacao-conteudo .formacao-lista ul"
+);
+
+const formacaoLista = [];
+
+arraySeletorFormacao.forEach(function (
+  seletorFormacaoItem,
+  indiceFormacaoItem
+) {
+  formacaoLista.push(` 
+  <li><a href="#" class="${
+    arrayMenuFormacao[indiceFormacaoItem].length > 1 ? "icone-adicional" : ""
+  } seletor-formacao" formacao-id="${indiceFormacaoItem}">${
+    seletorFormacaoItem.titulo
+  }</a></li>
+  `);
+});
+containerSeletorFormacao.innerHTML = formacaoLista.join("");
+
 const seletorFormacao = Array.from(
   document.querySelectorAll(".seletor-formacao")
 );
@@ -230,13 +280,26 @@ function alterarSeletorFormacao(event) {
   event.preventDefault();
   const formacaoId = event.target.getAttribute("formacao-id");
   const elementoCursosFormacao = document.querySelector(".cursos-formacao");
+  const setasFormacao = document.querySelectorAll(".slider > a");
   const cursosFormacao = [];
 
   if (arrayMenuFormacao[formacaoId].length) {
     arrayMenuFormacao[formacaoId].forEach(function (formacao) {
-      cursosFormacao.push("teste");
+      setasFormacao.forEach(function (seta) {
+        arrayMenuFormacao[formacaoId].length <= 1
+          ? seta.classList.add("ocultar-seta")
+          : seta.classList.remove("ocultar-seta");
+      });
+      cursosFormacao.push(`
+      <div class="curso">
+        <h4 class="font-1-s-b cor0">${formacao.curso}</h4>
+        <span class="formacao-data font-2-xs cor0">${formacao.data}</span>
+        <span class="font-1-s cor6">${formacao.instituição}</span>
+        <p class="font-2-s cor3">${formacao.descricao}</p>
+      </div>
+      `);
     });
-    console.log(cursosFormacao);
+    elementoCursosFormacao.innerHTML = cursosFormacao;
   }
 }
 

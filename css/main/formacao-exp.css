@@ -100,29 +100,31 @@
 #light-mode .formacao-lista a.icone-adicional:hover::before {
   filter: none;
 }
+.formacao-lista-descricao .slider {
+  position: relative;
+}
 
-.formacao-lista-descricao .slider,
+.formacao-lista-descricao .slider .cursos-formacao .curso,
 .experiencia-lista-descricao {
   display: grid;
   grid-template-columns: 2fr 1.3fr;
   padding: 20px 80px 100px;
-  position: relative;
 }
 
-.formacao-lista-descricao .slider .formacao-data,
+.formacao-lista-descricao .slider .cursos-formacao .curso .formacao-data,
 .experiencia-lista-descricao .experiencia-data {
   grid-column: 2 / -1;
   padding: 0;
 }
 
-.formacao-lista-descricao .slider span,
-.formacao-lista-descricao .slider p,
+.formacao-lista-descricao .slider .cursos-formacao .curso span,
+.formacao-lista-descricao .slider .cursos-formacao .curso p,
 .experiencia-lista-descricao span,
 .experiencia-lista-descricao p {
   grid-column: 1 / -1;
 }
 
-.formacao-lista-descricao .slider span,
+.formacao-lista-descricao .slider .cursos-formacao .curso span,
 .experiencia-lista-descricao span {
   padding: 20px 0 75px;
 }
@@ -150,6 +152,11 @@
   right: 28.5px;
   top: 50%;
   background: url("../../img/iconesetadireita.svg") no-repeat;
+}
+
+.formacao-lista-descricao .slider .ocultar-seta {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 1405px) {
