@@ -175,3 +175,71 @@ function ativarModoEscuro(event) {
 botaoDarkMode.forEach(function (botao) {
   botao.addEventListener("click", ativarModoEscuro);
 });
+
+//ARRAY SELETORES MENU FORMAÇÃO //
+const arrayMenuFormacao = [
+  [
+    {
+      curso: "Análise e Desenvolvimento de sistemas",
+      instituição: "Unisinos",
+      data: "02/12/2024 - 02/12/2080",
+      descricao:
+        "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum",
+    },
+  ],
+  [
+    {
+      curso: "JavaScript Completo - 80 horas",
+      instituição: "Origamid",
+      data: "02/12/2024 - 02/12/2060",
+      descricao:
+        "O curso vai do básico ao avançado com compreensão total da linguagem, dos seus principais métodos e da sua sintaxe. Aprendizado da linguagem, aplicação será na web, através de manipulações do DOM e requisições via Fetch API.",
+    },
+    {
+      curso: "HTML e CSS para Iniciantes",
+      instituição: "Origamid",
+      data: "02/12/2024 - 02/12/2055",
+      descricao:
+        "Foco na teoria + prática, você aprende os fundamentos por trás de cada decisão de código. E após isso você implementa em um projeto real — bikcraft.com. Você já sai do curso com um primeiro site profissional construído. Nele aprende-se CSS Flexbox e Grid Layout para construir os projetos responsivos e totalmente do zero, sem usar nada pronto.",
+    },
+    {
+      curso: "UI Design para Iniciantes",
+      instituição: "Origamid",
+      data: "02/12/2024 - 02/12/2055",
+      descricao:
+        "Foco na teoria + prática, você aprende os fundamentos por trás de cada decisão de código. E após isso você implementa em um projeto real.",
+    },
+  ],
+  [
+    {
+      curso: "Técnico de informática",
+      instituição: "Alcione",
+      data: "02/12/2024 - 02/12/2080",
+      descricao:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum. orem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ],
+];
+
+// SELETORES DO MENU FORMAÇÃO //
+const seletorFormacao = Array.from(
+  document.querySelectorAll(".seletor-formacao")
+);
+
+function alterarSeletorFormacao(event) {
+  event.preventDefault();
+  const formacaoId = event.target.getAttribute("formacao-id");
+  const elementoCursosFormacao = document.querySelector(".cursos-formacao");
+  const cursosFormacao = [];
+
+  if (arrayMenuFormacao[formacaoId].length) {
+    arrayMenuFormacao[formacaoId].forEach(function (formacao) {
+      cursosFormacao.push("teste");
+    });
+    console.log(cursosFormacao);
+  }
+}
+
+seletorFormacao.forEach(function (seletor) {
+  seletor.addEventListener("click", alterarSeletorFormacao);
+});
