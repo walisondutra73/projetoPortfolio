@@ -154,3 +154,9 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 900px) {
+  .header-menu-fixed {
+    padding: 15px 35px;
+  }
+}

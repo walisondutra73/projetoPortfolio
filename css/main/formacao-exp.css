@@ -156,4 +156,21 @@
   .formacao .formacao-descricao {
     margin: 40px auto 45px auto;
   }
+  .formacao-lista-descricao .slider h4 {
+    grid-column: 1/-1;
+    margin-bottom: 5px;
+  }
+  .formacao-lista-descricao .slider span.formacao-data {
+    grid-column: 1/-1;
+  }
+  .formacao-lista a.icone-adicional::before {
+    top: 3px;
+  }
+  .experiencia-lista-descricao h4 {
+    grid-column: 1/-1;
+    margin-bottom: 5px;
+  }
+  .experiencia-lista-descricao span.experiencia-data {
+    grid-column: 1/-1;
+  }
 }

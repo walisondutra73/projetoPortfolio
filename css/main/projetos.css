@@ -29,7 +29,7 @@
 .lista-projetos .projeto-amostra {
   display: grid;
   justify-items: center;
-  padding: 20px 70px;
+  padding: 20px 55px;
 }
 
 .projeto-amostra:nth-child(3n + 2) {
