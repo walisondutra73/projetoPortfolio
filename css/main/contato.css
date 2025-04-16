@@ -55,3 +55,12 @@
     1;
   padding: 50px;
 }
+
+@media (max-width: 1200px) {
+  .contato .contato-conteudo {
+    width: 900px;
+  }
+  .contato-conteudo .contato-lista ul {
+    width: 900px;
+  }
+}
