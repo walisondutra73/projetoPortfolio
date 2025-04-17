@@ -108,7 +108,8 @@
 .experiencia-lista-descricao {
   display: grid;
   grid-template-columns: 2fr 1.3fr;
-  padding: 20px 80px 100px;
+  grid-template-rows: max-content 80px auto;
+  padding: 20px 80px 20px;
 }
 
 .formacao-lista-descricao .slider .cursos-formacao .curso .formacao-data,
@@ -140,6 +141,7 @@
   height: 35px;
   transform: translateY(-50%);
   transition: 0.1s all;
+  z-index: 2;
 }
 
 .formacao-lista-descricao .slider .seta-slider-esquerda {
@@ -157,6 +159,25 @@
 .formacao-lista-descricao .slider .ocultar-seta {
   opacity: 0;
   visibility: hidden;
+}
+
+/* ESTILO DO SLIDER */
+.slider {
+  width: 790px;
+  min-height: 480px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.slider .cursos-formacao {
+  display: flex;
+  position: absolute;
+  height: 100%;
+}
+
+.slider .cursos-formacao .curso {
+  width: 790px;
+  align-self: center;
 }
 
 @media (max-width: 1405px) {

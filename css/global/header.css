@@ -115,6 +115,7 @@
   left: 0;
   opacity: 0;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .perfil-fixed,

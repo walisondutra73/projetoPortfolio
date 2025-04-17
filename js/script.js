@@ -200,6 +200,13 @@ const arrayMenuFormacao = [
   ],
   [
     {
+      curso: "UI Design para Iniciantes",
+      instituição: "Origamid",
+      data: "02/12/2024 - 02/12/2055",
+      descricao:
+        "Foco na teoria + prática, você aprende os fundamentos por trás de cada decisão de código. E após isso você implementa em um projeto real.",
+    },
+    {
       curso: "JavaScript Completo - 80 horas",
       instituição: "Origamid",
       data: "02/12/2024 - 02/12/2060",
@@ -212,13 +219,6 @@ const arrayMenuFormacao = [
       data: "02/12/2024 - 02/12/2055",
       descricao:
         "Foco na teoria + prática, você aprende os fundamentos por trás de cada decisão de código. E após isso você implementa em um projeto real — bikcraft.com. Você já sai do curso com um primeiro site profissional construído. Nele aprende-se CSS Flexbox e Grid Layout para construir os projetos responsivos e totalmente do zero, sem usar nada pronto.",
-    },
-    {
-      curso: "UI Design para Iniciantes",
-      instituição: "Origamid",
-      data: "02/12/2024 - 02/12/2055",
-      descricao:
-        "Foco na teoria + prática, você aprende os fundamentos por trás de cada decisão de código. E após isso você implementa em um projeto real.",
     },
   ],
   [
@@ -281,6 +281,8 @@ function alterarSeletorFormacao(event) {
   const formacaoId = event.target.getAttribute("formacao-id");
   const elementoCursosFormacao = document.querySelector(".cursos-formacao");
   const setasFormacao = document.querySelectorAll(".slider > a");
+
+  let posicaoSlider = 0;
   const cursosFormacao = [];
 
   if (arrayMenuFormacao[formacaoId].length) {
@@ -300,7 +302,27 @@ function alterarSeletorFormacao(event) {
       `);
     });
     elementoCursosFormacao.innerHTML = cursosFormacao;
+    arrayMenuFormacao[formacaoId].length > 1
+      ? (elementoCursosFormacao.style.left = "-790px")
+      : (elementoCursosFormacao.style.left = "0px");
   }
+
+  //SLIDER//
+
+  const sliderItens = Array.from(
+    document.querySelectorAll(".slider .cursos-formacao .curso")
+  );
+
+  setasFormacao[1].addEventListener("click", function (event) {
+    event.preventDefault();
+    elementoCursosFormacao.appendChild(sliderItens[0]);
+    sliderItens.push(sliderItens.shift());
+  });
+  setasFormacao[0].addEventListener("click", function (event) {
+    event.preventDefault();
+    elementoCursosFormacao.prepend(sliderItens[sliderItens.length - 1]);
+    sliderItens.unshift(sliderItens.pop());
+  });
 }
 
 seletorFormacao.forEach(function (seletor) {
