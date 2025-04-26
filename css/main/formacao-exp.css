@@ -181,3 +181,12 @@
     grid-column: 1/-1;
   }
 }
+
+@media (max-width: 900px) {
+  .formacao-experiencia-bg .container {
+    width: 700px;
+  }
+  .formacao-lista-descricao .slider .cursos-formacao .curso .formacao-data {
+    grid-column: 1 / -1;
+  }
+}

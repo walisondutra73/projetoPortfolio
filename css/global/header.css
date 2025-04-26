@@ -156,7 +156,25 @@
 }
 
 @media (max-width: 900px) {
+  .header-menu {
+    padding: 15px;
+  }
+  .header-menu .perfil img {
+    width: 70px;
+    height: 70px;
+  }
+  .header-menu .perfil .info-pessoal .botao-darkmode img {
+    width: 35px;
+    height: 35px;
+  }
+  .header-menu .info-pessoal {
+    gap: 20px;
+  }
   .header-menu-fixed {
     padding: 15px 35px;
+  }
+  .header-info .header-titulo {
+    margin-top: 0px;
+    margin-bottom: 31px;
   }
 }

@@ -111,3 +111,37 @@
     padding-top: 60px;
   }
 }
+@media (max-width: 900px) {
+  .habilidades .icones-habilidades {
+    gap: 35px 0;
+  }
+  .sobre-titulo::after {
+    height: 600px;
+  }
+  @media (max-width: 1405px) {
+    .sobre .sobre-conexao-icone {
+      padding-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-mim p {
+    padding: 0;
+  }
+  .habilidades .icones-habilidades {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 412px) {
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+  .sobre .sobre-titulo::after {
+    display: none;
+  }
+  .sobre .sobre-titulo::before {
+    width: 150px;
+  }
+}

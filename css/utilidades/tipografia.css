@@ -59,3 +59,34 @@
     font-size: 1.25rem;
   }
 }
+@media (max-width: 900px) {
+  .font-1-l {
+    font-size: 1.25rem;
+  }
+  .font-1-s {
+    font-size: 1rem;
+  }
+  .font-1-xxl {
+    font-size: 1.75rem;
+  }
+  .font-2-m {
+    font-size: 1.25rem;
+  }
+  .font-1-m {
+    font-size: 1rem;
+  }
+
+  .font-1-xl {
+    font-size: 2rem;
+  }
+
+  .font-2-s {
+    font-size: 1rem;
+  }
+  .font-1-s-b {
+    font-size: 1rem;
+  }
+  .font-2-xs {
+    font-size: 1rem;
+  }
+}

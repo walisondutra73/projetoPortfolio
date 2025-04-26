@@ -58,9 +58,40 @@
 
 @media (max-width: 1200px) {
   .contato .contato-conteudo {
-    width: 900px;
+    width: 850px;
   }
   .contato-conteudo .contato-lista ul {
-    width: 900px;
+    width: 850px;
+  }
+}
+@media (max-width: 900px) {
+  .contato .contato-conteudo {
+    width: 650px;
+    height: 200px;
+  }
+  .contato-conteudo .contato-lista ul {
+    width: 650px;
+    height: 200px;
+  }
+  .contato-conteudo li:nth-child(2n) {
+    padding: 40px;
+  }
+}
+@media (max-width: 412px) {
+  .contato .contato-conteudo {
+    width: 300px;
+    height: auto;
+  }
+  .contato-conteudo .contato-lista ul {
+    grid-template-columns: 1fr;
+    width: 300px;
+    height: auto;
+  }
+  .contato .contato-conteudo .contato-lista {
+    width: 300px;
+    height: auto;
+  }
+  .contato .contato-descricao {
+    width: 250px;
   }
 }

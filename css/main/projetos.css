@@ -214,6 +214,17 @@
         transparent 100%
       )
       1;
-
-    }
+  }
+}
+@media (max-width: 900px) {
+  .projetos .lista-projetos {
+    padding: 15px;
+  }
+  .lista-projetos .projeto-amostra {
+    padding: 10px 37px;
+  }
+  .projeto-amostra .projeto-img {
+    width: 150px;
+    height: 150px;
+  }
 }

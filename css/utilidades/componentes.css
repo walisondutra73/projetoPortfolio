@@ -23,6 +23,9 @@
 }
 @media (max-width: 900px) {
   .container {
-    max-width: 850px;
+    max-width: 750px;
+  }
+  .detalhe-traco {
+    width: 150px;
   }
 }
