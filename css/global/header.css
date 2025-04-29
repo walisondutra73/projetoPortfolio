@@ -231,8 +231,9 @@
   .header-menu .menu-lista {
     display: none;
   }
-  .header-info h1 {
-  }
+}
+
+@media (max-width: 500px) {
   .header-info .header-titulo {
     margin-left: 35px;
   }
