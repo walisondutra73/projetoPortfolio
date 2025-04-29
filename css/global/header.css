@@ -142,6 +142,18 @@
     padding: 15px 30px;
   }
 
+  .header-menu .perfil img {
+    width: 70px;
+    height: 70px;
+  }
+  .header-menu .perfil .info-pessoal .botao-darkmode img {
+    width: 35px;
+    height: 35px;
+  }
+  .perfil .info-pessoal h2 {
+    width: 135px;
+  }
+
   .header-info .header-titulo {
     margin-left: 60px;
   }
@@ -161,8 +173,8 @@
     padding: 15px;
   }
   .header-menu .perfil img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .header-menu .perfil .info-pessoal .botao-darkmode img {
     width: 35px;
@@ -171,11 +183,55 @@
   .header-menu .info-pessoal {
     gap: 20px;
   }
+
+  .header-menu .menu-lista {
+    gap: 15px;
+  }
+
+  .perfil .info-pessoal h2 {
+    width: 85px;
+  }
+
   .header-menu-fixed {
     padding: 15px 35px;
   }
   .header-info .header-titulo {
     margin-top: 0px;
     margin-bottom: 31px;
+    margin-left: 70px;
+  }
+  .header-info .header-titulo::before {
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    left: -60px;
+    top: -10px;
+  }
+  .header-info .botao-projetos {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-menu {
+    flex-flow: column nowrap;
+  }
+  .perfil .info-pessoal h2 {
+    width: 300px;
+  }
+  .header-menu .menu-lista {
+    gap: 25px;
+  }
+  .header-info h1 {
+  }
+  .header-info .header-titulo {
+    margin-left: 35px;
+  }
+  .header-info .header-titulo::before {
+    width: 30px;
+    height: 30px;
+    left: -35px;
+    top: -2px;
   }
 }

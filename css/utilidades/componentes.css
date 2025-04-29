@@ -18,14 +18,26 @@
 
 @media (max-width: 1405px) {
   .container {
-    max-width: 900px;
+    max-width: 870px;
   }
 }
 @media (max-width: 900px) {
   .container {
-    max-width: 750px;
+    max-width: 680px;
   }
   .detalhe-traco {
     width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 380px;
   }
 }
