@@ -231,6 +231,16 @@
   .header-menu .menu-lista {
     display: none;
   }
+
+  .menu-hamburguer {
+    display: block;
+    width: 200px;
+    height: 250px;
+    background-color: #000;
+    position: fixed;
+    top: 250px;
+    z-index: 4;
+  }
 }
 
 @media (max-width: 500px) {
@@ -242,15 +252,5 @@
     height: 30px;
     left: -35px;
     top: -2px;
-  }
-
-  .menu-hamburguer {
-    display: block;
-    width: 200px;
-    height: 250px;
-    background-color: #000;
-    position: fixed;
-    top: 50%;
-    z-index: 4;
   }
 }

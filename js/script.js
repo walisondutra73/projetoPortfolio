@@ -2,7 +2,6 @@
 
 function scrollMouse(event) {
   const posicaoYPagina = window.pageYOffset;
-  console.log(posicaoYPagina);
 
   if (window.outerWidth > 700) {
     if (posicaoYPagina >= 250) {
