@@ -330,3 +330,11 @@ function alterarSeletorFormacao(event) {
 seletorFormacao.forEach(function (seletor) {
   seletor.addEventListener("click", alterarSeletorFormacao);
 });
+
+//Menu Hamburguer
+const iconeHamburguer = document
+  .querySelector("#menu-hamburguer-icone")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".menu-hamburguer").classList.toggle("ativo");
+  });

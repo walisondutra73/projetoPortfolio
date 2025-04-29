@@ -235,11 +235,29 @@
   .menu-hamburguer {
     display: block;
     width: 200px;
-    height: 250px;
-    background-color: #000;
+    background-color: #0a0a0ad1;
     position: fixed;
-    top: 250px;
-    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    z-index: 3;
+    transition: 0.3s all;
+  }
+
+  .menu-hamburguer.ativo {
+    left: 0;
+  }
+
+  .menu-hamburguer nav ul {
+    text-transform: uppercase;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .menu-hamburguer nav ul li a {
+    color: var(--cor4);
   }
 }
 
