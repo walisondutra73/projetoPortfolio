@@ -28,6 +28,10 @@
   align-items: center;
 }
 
+.perfil .info-pessoal .icone-menu-hamburguer img {
+  display: none;
+}
+
 .menu-lista {
   flex-wrap: wrap;
 }
@@ -218,10 +222,14 @@
     flex-flow: column nowrap;
   }
   .perfil .info-pessoal h2 {
-    width: 300px;
+    width: 250px;
+  }
+  .perfil .info-pessoal .icone-menu-hamburguer img {
+    display: block;
+    width: 40px;
   }
   .header-menu .menu-lista {
-    gap: 25px;
+    display: none;
   }
   .header-info h1 {
   }
@@ -233,5 +241,15 @@
     height: 30px;
     left: -35px;
     top: -2px;
+  }
+
+  .menu-hamburguer {
+    display: block;
+    width: 200px;
+    height: 250px;
+    background-color: #000;
+    position: fixed;
+    top: 50%;
+    z-index: 4;
   }
 }
