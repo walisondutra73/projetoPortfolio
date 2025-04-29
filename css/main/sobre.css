@@ -132,6 +132,21 @@
   .habilidades .icones-habilidades {
     padding: 0 5px;
   }
+  .habilidades .icones-habilidades img {
+    width: 80px;
+    height: 80px;
+  }
+  .sobre-titulo::after {
+    height: 465px;
+  }
+  .sobre .sobre-conexao-icone {
+    width: 30px;
+    height: 60px;
+  }
+  .sobre-mim h3,
+  .habilidades h3 {
+    padding-bottom: 45px;
+  }
 }
 
 @media (max-width: 412px) {

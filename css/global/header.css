@@ -223,8 +223,9 @@
   .header-menu .menu-lista {
     gap: 25px;
   }
-  .header-info h1 {
-  }
+}
+
+@media (max-width: 500px) {
   .header-info .header-titulo {
     margin-left: 35px;
   }
@@ -234,4 +235,30 @@
     left: -35px;
     top: -2px;
   }
+  .perfil .info-pessoal h2 {
+    width: 220px;
+  }
+  .header-menu .perfil img {
+    width: 40px;
+    height: 40px;
+  }
+  .header-menu .perfil .info-pessoal .botao-darkmode img {
+    width: 20px;
+    height: 20px;
+  }
+  .header-menu {
+    padding: 5px;
+  }
+  .header-info .header-titulo::before {
+    left: -30px;
+  }
+  .header-info .header-titulo {
+    margin-left: 10px;
+  }
+  .header-info .botao-projetos {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 380px) {
 }
