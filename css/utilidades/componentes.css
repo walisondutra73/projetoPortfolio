@@ -24,6 +24,7 @@
 @media (max-width: 900px) {
   .container {
     max-width: 680px;
+    padding: 60px 0;
   }
   .detalhe-traco {
     width: 150px;
@@ -32,12 +33,12 @@
 
 @media (max-width: 700px) {
   .container {
-    max-width: 500px;
+    max-width: 480px;
   }
 }
 
 @media (max-width: 500px) {
   .container {
-    max-width: 380px;
+    max-width: 350px;
   }
 }

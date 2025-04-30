@@ -127,7 +127,7 @@
 
 @media (max-width: 900px) {
   .sobre-mim p {
-    padding: 0;
+    padding: 0 40px;
   }
   .habilidades .icones-habilidades {
     padding: 0 5px;
@@ -148,8 +148,32 @@
     padding-bottom: 45px;
   }
 }
+@media (max-width: 700px) {
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+  .sobre-titulo::before {
+    width: 200px;
+    top: 80px;
+  }
+  .sobre-titulo::after {
+    display: none;
+  }
+  .sobre-titulo {
+    padding-bottom: 90px;
+  }
+  .habilidades .icones-habilidades img {
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+  }
+  .sobre .sobre-conexao-icone {
+    width: 20px;
+    height: 50px;
+  }
+}
 
-@media (max-width: 412px) {
+@media (max-width: 500px) {
   .sobre {
     grid-template-columns: 1fr;
   }
@@ -158,5 +182,9 @@
   }
   .sobre .sobre-titulo::before {
     width: 150px;
+  }
+  .habilidades .icones-habilidades img {
+    width: 50px;
+    height: 50px;
   }
 }
