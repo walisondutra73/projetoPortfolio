@@ -28,6 +28,10 @@
   align-items: center;
 }
 
+.perfil .info-pessoal .icone-menu-hamburguer img {
+  display: none;
+}
+
 .menu-lista {
   flex-wrap: wrap;
 }
@@ -218,10 +222,42 @@
     flex-flow: column nowrap;
   }
   .perfil .info-pessoal h2 {
-    width: 300px;
+    width: 250px;
+  }
+  .perfil .info-pessoal .icone-menu-hamburguer img {
+    display: block;
+    width: 40px;
   }
   .header-menu .menu-lista {
-    gap: 22px;
+    display: none;
+  }
+
+  .menu-hamburguer {
+    display: block;
+    width: 200px;
+    background-color: #0a0a0ad1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    z-index: 3;
+    transition: 0.3s all;
+  }
+
+  .menu-hamburguer.ativo {
+    left: 0;
+  }
+
+  .menu-hamburguer nav ul {
+    text-transform: uppercase;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .menu-hamburguer nav ul li a {
+    color: var(--cor4);
   }
 }
 
@@ -235,30 +271,4 @@
     left: -35px;
     top: -2px;
   }
-  .perfil .info-pessoal h2 {
-    width: 220px;
-  }
-  .header-menu .perfil img {
-    width: 40px;
-    height: 40px;
-  }
-  .header-menu .perfil .info-pessoal .botao-darkmode img {
-    width: 20px;
-    height: 20px;
-  }
-  .header-menu {
-    padding: 5px;
-  }
-  .header-info .header-titulo::before {
-    left: -30px;
-  }
-  .header-info .header-titulo {
-    margin-left: 10px;
-  }
-  .header-info .botao-projetos {
-    padding: 10px 20px;
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 380px) {
 }

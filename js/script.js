@@ -3,12 +3,14 @@
 function scrollMouse(event) {
   const posicaoYPagina = window.pageYOffset;
 
-  if (posicaoYPagina >= 250) {
-    document.querySelector(".header-menu-fixed").style.opacity = 1;
-    document.querySelector(".header-menu-fixed").style.top = 0;
-  } else {
-    document.querySelector(".header-menu-fixed").style.opacity = 0;
-    document.querySelector(".header-menu-fixed").style.top = "-131px";
+  if (window.outerWidth > 700) {
+    if (posicaoYPagina >= 250) {
+      document.querySelector(".header-menu-fixed").style.opacity = 1;
+      document.querySelector(".header-menu-fixed").style.top = 0;
+    } else {
+      document.querySelector(".header-menu-fixed").style.opacity = 0;
+      document.querySelector(".header-menu-fixed").style.top = "-131px";
+    }
   }
 }
 
@@ -328,3 +330,11 @@ function alterarSeletorFormacao(event) {
 seletorFormacao.forEach(function (seletor) {
   seletor.addEventListener("click", alterarSeletorFormacao);
 });
+
+//Menu Hamburguer
+const iconeHamburguer = document
+  .querySelector("#menu-hamburguer-icone")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".menu-hamburguer").classList.toggle("ativo");
+  });
