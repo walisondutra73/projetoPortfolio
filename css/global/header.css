@@ -141,6 +141,11 @@
   color: var(--cor4);
 }
 
+#fundo-menu-hamburguer,
+.menu-hamburguer {
+  display: none;
+}
+
 @media (max-width: 1405px) {
   .header-menu {
     padding: 15px 30px;
@@ -232,6 +237,17 @@
     display: none;
   }
 
+  #fundo-menu-hamburguer {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #0000005b;
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    transition: 0.3s all;
+  }
+
   .menu-hamburguer {
     display: block;
     width: 200px;
@@ -240,7 +256,7 @@
     top: 0;
     bottom: 0;
     left: -200px;
-    z-index: 3;
+    z-index: 4;
     transition: 0.3s all;
   }
 
@@ -258,6 +274,14 @@
 
   .menu-hamburguer nav ul li a {
     color: var(--cor4);
+  }
+
+  #menu-hamburguer-icone-fechar {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    left: 210px;
   }
 }
 

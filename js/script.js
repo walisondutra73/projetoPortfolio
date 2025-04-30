@@ -32,7 +32,12 @@ const botoesNav = Array.from(document.querySelectorAll(".menu-lista li a"));
 const botoesNavFixed = Array.from(
   document.querySelectorAll(".header-menu-fixed li a")
 );
-const arrayBotoesNav = botoesNav.concat(botoesNavFixed);
+const botoesHamburguerNav = Array.from(
+  document.querySelectorAll(".menu-hamburguer nav ul li a")
+);
+const arrayBotoesNav = botoesNav
+  .concat(botoesNavFixed)
+  .concat(botoesHamburguerNav);
 
 function redirectBotoes(event) {
   event.preventDefault();
@@ -283,6 +288,17 @@ function alterarSeletorFormacao(event) {
   const formacaoId = event.target.getAttribute("formacao-id");
   const elementoCursosFormacao = document.querySelector(".cursos-formacao");
   const setasFormacao = document.querySelectorAll(".slider > a");
+  let elementoCursosFormacaoLeft = "-790px";
+  if (window.innerWidth <= 1405 && window.innerWidth >= 901) {
+    elementoCursosFormacaoLeft = "-560px";
+  } else if (window.innerWidth <= 900 && window.innerWidth >= 701) {
+    elementoCursosFormacaoLeft = "-430px";
+  } else if (window.innerWidth <= 700) {
+    elementoCursosFormacaoLeft = "-309px";
+  } else {
+    elementoCursosFormacaoLeft = "-790px";
+  }
+  console.log(window.innerWidth);
 
   let posicaoSlider = 0;
   const cursosFormacao = [];
@@ -305,7 +321,7 @@ function alterarSeletorFormacao(event) {
     });
     elementoCursosFormacao.innerHTML = cursosFormacao;
     arrayMenuFormacao[formacaoId].length > 1
-      ? (elementoCursosFormacao.style.left = "-790px")
+      ? (elementoCursosFormacao.style.left = elementoCursosFormacaoLeft)
       : (elementoCursosFormacao.style.left = "0px");
   }
 
@@ -331,10 +347,38 @@ seletorFormacao.forEach(function (seletor) {
   seletor.addEventListener("click", alterarSeletorFormacao);
 });
 
+//Fundo Menu Hamburguer
+const fundoMenuHamburguer = document.querySelector("#fundo-menu-hamburguer");
+
+fundoMenuHamburguer.addEventListener("click", function (event) {
+  event.target.style.opacity = 0;
+  event.target.style.visibility = "hidden";
+  document.querySelector(".menu-hamburguer").classList.remove("ativo");
+  document.querySelector("#menu-hamburguer-icone-fechar").style.opacity = 0;
+  document.querySelector("#menu-hamburguer-icone-fechar").style.visibility =
+    "hidden";
+});
+
+const menuHamburguerIconeFechar = document.querySelector(
+  "#menu-hamburguer-icone-fechar"
+);
+
+menuHamburguerIconeFechar.addEventListener("click", function (event) {
+  event.target.style.opacity = 0;
+  event.target.style.visibility = "hidden";
+  document.querySelector(".menu-hamburguer").classList.remove("ativo");
+  fundoMenuHamburguer.style.opacity = 0;
+  fundoMenuHamburguer.style.visibility = "hidden";
+});
+
 //Menu Hamburguer
 const iconeHamburguer = document
   .querySelector("#menu-hamburguer-icone")
   .addEventListener("click", function (event) {
     event.preventDefault();
     document.querySelector(".menu-hamburguer").classList.toggle("ativo");
+    fundoMenuHamburguer.style.opacity = 1;
+    fundoMenuHamburguer.style.visibility = "visible";
+    menuHamburguerIconeFechar.style.opacity = 1;
+    menuHamburguerIconeFechar.style.visibility = "visible";
   });
