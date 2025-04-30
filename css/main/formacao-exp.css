@@ -201,6 +201,17 @@
   .experiencia-lista-descricao span.experiencia-data {
     grid-column: 1/-1;
   }
+  .formacao-lista-descricao .slider .cursos-formacao .curso,
+  .experiencia-lista-descricao {
+    padding: 20px 40px 20px;
+  }
+  .formacao-conteudo,
+  .experiencia-conteudo {
+    padding-left: 20px;
+  }
+  .slider .cursos-formacao {
+    max-width: 664px;
+  }
 }
 
 @media (max-width: 900px) {
