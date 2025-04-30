@@ -66,15 +66,31 @@
 }
 @media (max-width: 900px) {
   .contato .contato-conteudo {
-    width: 650px;
+    width: 500px;
     height: 200px;
   }
   .contato-conteudo .contato-lista ul {
-    width: 650px;
+    width: 500px;
     height: 200px;
   }
   .contato-conteudo li:nth-child(2n) {
     padding: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .contato .contato-conteudo {
+    width: 300px;
+  }
+
+  .contato .contato-descricao {
+    width: auto;
+  }
+  .contato-conteudo .contato-lista ul {
+    width: 300px;
+  }
+
+  .contato-conteudo .contato-lista ul {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 412px) {

@@ -215,9 +215,6 @@
   .experiencia-conteudo {
     padding-left: 20px;
   }
-  .slider .cursos-formacao {
-    max-width: 664px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -234,8 +231,19 @@
 }
 
 @media (max-width: 700px) {
+  .formacao .formacao-descricao,
+  .experiencia .experiencia-descricao {
+    width: auto;
+  }
   .slider,
   .slider .cursos-formacao .curso {
-    width: 309px;
+    width: 316px;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider,
+  .slider .cursos-formacao .curso {
+    width: 200px;
   }
 }

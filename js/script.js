@@ -294,7 +294,7 @@ function alterarSeletorFormacao(event) {
   } else if (window.innerWidth <= 900 && window.innerWidth >= 701) {
     elementoCursosFormacaoLeft = "-430px";
   } else if (window.innerWidth <= 700) {
-    elementoCursosFormacaoLeft = "-309px";
+    elementoCursosFormacaoLeft = "-316px";
   } else {
     elementoCursosFormacaoLeft = "-790px";
   }
